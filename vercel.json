@@ -1,31 +1,15 @@
 {
-  "version": 2,
   "builds": [
     {
       "src": "server.js",
-      "use": "@vercel/node",
-      "config": {
-        "includeFiles": [
-          "public/**",
-          "views/**",
-          "models/**",
-          "controllers/**",
-          "routes/**",
-          "utils/**",
-          "app.js",
-          "dev-data/**",
-          "*.js"
-        ]
-      }
+      "use": "@vercel/node"
     }
   ],
   "routes": [
     {
       "src": "/(.*)",
-      "dest": "server.js"
+      "dest": "/server.js",
+      "methods": ["GET", "POST", "PUT", "PATCH", "DELETE", "OPTIONS"]
     }
-  ],
-  "env": {
-    "NODE_ENV": "production"
-  }
+  ]
 }
