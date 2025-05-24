@@ -12,7 +12,9 @@
           "controllers/**",
           "routes/**",
           "utils/**",
-          "app.js"
+          "app.js",
+          "dev-data/**",
+          "*.js"
         ]
       }
     }
